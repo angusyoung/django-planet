@@ -4,3 +4,4 @@ django-tagging
 django-pagination
 feedparser
 south
+BeautifulSoup
