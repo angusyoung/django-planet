@@ -4,13 +4,21 @@ Django-planet has been tested with django 1.2.1 and python 2.6.
 
 In order to integrate django-planet to your django project
 you'll need to install also django-atompub [1], django-pagination [2],
-feedparser [3] and django-tagging [4], BeautifulSoup [5].
+feedparser [3] and django-tagging [4], BeautifulSoup [5], gevent [6].
 
 [1] http://code.google.com/p/django-atompub/
 [2] http://code.google.com/p/django-pagination/
 [3] http://www.feedparser.org/
 [4] http://code.google.com/p/django-tagging/
 [5] http://www.crummy.com/software/BeautifulSoup/#Download
+[6] http://www.gevent.org/
+
+On Ubuntu, for a mysql set up in virtualenv using pip, type those commands:
+sudo apt-get build-dep python-mysqldb
+sudo apt-get install libevent-dev
+pip install mysql-python gevent django django-pagination feedparser django-tagging BeautifulSoup
+
+Then get the source of django-atompub and place the atompub directory in the site-packages directory of the virtualenv environment.
 
 * create a local_settings.py file:
 
